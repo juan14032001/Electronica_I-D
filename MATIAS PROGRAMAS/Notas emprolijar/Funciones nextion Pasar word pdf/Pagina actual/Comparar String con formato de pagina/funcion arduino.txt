@@ -1,0 +1,23 @@
+
+String datos = Serial.readString();
+int PaginaActual = Leer_Pagina(datos);
+
+
+//----- Funcion Leer pagina
+//----- Hay que enviarle el string leido del puerto.
+//----- Si el string no tiene el formato del comando sendme, devuelve -1.
+//----- Si es el formato del sendme retorna el numero de pagina.
+
+int Leer_Pagina (String datosRecibidos) {
+  int retorno = -1;
+  if (datosRecibidos[0] == 102)
+    if (datosRecibidos[2] == 255)
+      if (datosRecibidos[3] == 255)
+        if (datosRecibidos[4] == 255) {
+          int pagina = datosRecibidos[1];
+          retorno = pagina;
+        }
+  return retorno;
+}
+
+//----- Fin de funcion

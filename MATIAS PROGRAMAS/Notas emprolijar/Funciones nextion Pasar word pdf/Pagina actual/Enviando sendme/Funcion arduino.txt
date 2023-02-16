@@ -1,0 +1,49 @@
+//----- Funcion Leer pagina
+// devuelve en numero de pagina en una variable tipo "int"
+// no hay que mandarle ningun parametro
+
+//En el string[]
+// str[0] = 102
+// str[1] = numero de pagina (esta en hexa)
+// str[2,3,4] = 255 (0xff)
+
+
+/* Funcion PREGUNTAR PAGINA */
+int Preguntar_Pagina()
+{
+  // Enviamos 0xFF 0xFF 0xFF y despues vaciamos el puerto!
+  Serial.write(0xff);
+  Serial.write(0xff);
+  Serial.write(0xff);
+  while (Serial.available() > 0)
+    Serial.read();
+
+  // Declaracion de variables:
+  int retorno = -1;
+  String str = "";
+
+  //Enviamos el comando:
+  Serial.print("sendme");
+  Serial.write(0xff);
+  Serial.write(0xff);
+  Serial.write(0xff);
+
+  // Mientras no haya una respuesta esperamos:
+  while (Serial.available() == 0)
+    delay(1);
+
+  // Usando Serial.readString() funciona bien!
+  str = Serial.readString();
+
+  // Verificamos que el formato sea el correcto!
+  if (str[0] == 102)
+    if (str[2] == 255)
+      if (str[3] == 255)
+        if (str[4] == 255)
+        {
+          int pagina = str[1];
+          retorno = pagina;
+        }
+  return retorno;
+}
+/* Fin de la funcion */

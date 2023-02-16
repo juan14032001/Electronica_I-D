@@ -1,0 +1,21 @@
+FUNCION indexOf
+
+myString.indexOf(val)
+myString.indexOf(val, from)
+
+Parámetros
+myString: una variable de tipo String.
+val: el valor a buscar. Tipos de datos permitidos: char, String.
+from: el índice desde el que iniciar la búsqueda.
+
+Devuelve: -1 si no encontro la cadena o el caracter
+Devuelve: la ubicacion donde esta el dato encontrado
+
+Si busco un caracter utilizo .indexOf('char'); (comillas simples)
+Si busco una cadena utilizo .indexOf("cadena"); (comillas dobles)
+
+Ejemplo:
+String texto ="Hola esta es una prueba de la funcion";
+int retorno = texto.indexOf("prueba");
+
+//En la variable retorno se guarda el valor 18 (posicion del string donde lo encontro)

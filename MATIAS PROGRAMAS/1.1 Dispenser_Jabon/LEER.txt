@@ -1,0 +1,7 @@
+En esta carpeta se encuentra el manual y el codigo del dispenser.
+
+En el "Manual" se puede ver como funciona el dispenser y además las 
+conexiones y modificaciones que hay que realizar en la placa.
+
+En la carpeta "CodigoVSC" esta el codigo para subir al la placa NODEMCU,
+el codigo esta hecho en "Visual Studio Code" con la extension Platform.io

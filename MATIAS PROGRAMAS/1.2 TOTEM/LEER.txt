@@ -1,0 +1,8 @@
+En esta carpeta se encuentra el manual y el codigo del Totem.
+
+En el archivo "Totem manual" se puede ver como funciona el Totem, las conexiones
+de los pulsadores y las modificaciones que se deben realizar en la placa
+ambiente controlado para que todo funcione correctamente.
+
+En la carpeta "CodigoVSC" esta el codigo para subir al la placa NODEMCU,
+el codigo esta hecho en "Visual Studio Code" con la extension Platform.io.

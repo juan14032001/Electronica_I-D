@@ -1,0 +1,36 @@
+---------------------------------------------------------------------
+OJO ESTA ES UNA FORMA ALTERNATIVA, PERO NO LA MAS EFICIENTE.
+LA MEJOR ES USANDO SENDME EN NEXTION Y LEYENDO LA INFO 0X66
+---------------------------------------------------------------------
+
+Para saber en que pagina estamos desde Arduino:
+Desde Nextion editor; en la pagina principal crear una variable global
+Cada vez que entremos en una pagina (desde nextion editor) modificamos el valor de esa variable, 
+y guardamos la id de la pagina actual.
+
+  //La variable global se llama "PagActual" y se creo como variable
+  // global en la pagina "Menu"
+En el preinicializate de la pagina 3 ponemos:
+Menu.PagActual.val=3
+
+
+
+
+Desde arduino hacemos:
+
+  //La variable global se llama "PagActual" y se creo como variable
+  // global en la pagina "Menu"
+
+  int paginaActual = myNex.readNumber("Menu.PagActual.val");
+
+  if (paginaActual == 1) {
+    Funcion_Para_Pagina_1();
+  }
+
+  if (paginaActual == 2) {
+    Funcion_Para_Pagina_2();
+  }
+
+  if (paginaActual == 3) {
+    Funcion_Para_Pagina_3();
+  }

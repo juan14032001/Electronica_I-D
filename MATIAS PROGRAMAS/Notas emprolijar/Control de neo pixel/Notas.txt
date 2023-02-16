@@ -1,0 +1,2 @@
+Utilizado en la placa de ambiente controlado.
+Estan conectados en el pin D3

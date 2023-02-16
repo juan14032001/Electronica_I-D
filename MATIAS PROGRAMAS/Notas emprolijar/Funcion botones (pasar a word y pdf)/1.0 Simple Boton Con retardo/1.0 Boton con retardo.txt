@@ -1,0 +1,40 @@
+/* ----------> Funcion leer boton retardo <---------- */
+/* Retorna: -1: no esta pulsado, 1: se pulso sin retardo, 2: con retardo */
+int Funcion_Boton_Retardo(int pulsador, int retardo_ms)
+{
+  int boton_presionado = 0;
+  int i = 0;
+  int retorno = -1;
+  if (digitalRead(pulsador) == LOW)
+  {
+    boton_presionado = 1;
+    while (digitalRead(pulsador) == LOW && i < retardo_ms)
+    {
+      delay(1);
+      i++;
+    }
+    Serial.print("\nSe presiono el pulsador GPIO " + String(pulsador) + " durante " + String(i) + " milisegundos.");
+  }
+  //------
+  // Sin retardo
+  if (boton_presionado == 1 && i < retardo_ms)
+  {
+    boton_presionado = 0;
+    retorno = 1;
+    while (digitalRead(pulsador) == LOW)
+      delay(1);
+  }
+
+  //------
+  // Con Retardo
+  if (boton_presionado == 1 && i == retardo_ms)
+  {
+    boton_presionado = 0;
+    retorno = 2;
+    while (digitalRead(pulsador) == LOW)
+      delay(1);
+  }
+
+  return retorno;
+}
+/* Fin de funcion */

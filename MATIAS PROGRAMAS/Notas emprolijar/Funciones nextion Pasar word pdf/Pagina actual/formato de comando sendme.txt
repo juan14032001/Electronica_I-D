@@ -1,0 +1,7 @@
+al enviar el comando "sendme" la pantalla nextion nos envia:
+
+0x66, 0x"numero de pagina en hex",0xFF,0xFF,0xFF.
+
+En decimal:
+
+102,"numero de pagina",255,255,255.

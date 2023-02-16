@@ -1,0 +1,3 @@
+Usando esta funcion, tenemos que leer constantemente el puerto serie,
+Cuando llegue un dato lo guardamos en una variable de tipo String
+Luego vamos leyendo los datos de la variable y verificando que tenga el formato del comando "sendme"

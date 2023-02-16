@@ -1,0 +1,15 @@
+En esta carpeta se encuentra un archivo sobre todos los comandos AT necesarios
+para poder hacer un envio de datos correctos, un archivo breve que explica como
+funciona el programa y el codigo de un programa que envia datos via GPRS
+
+En el archivo "Informe sobre envio de datos" estan detallados todos los comandos AT
+que debemos conocer para poder hacer el envio de datos al servidor.
+
+El archivo "Explicacion codigo" indica brevemente que es lo que hace el codigo que 
+cargamos a la NODE MCU.
+
+En la carpeta "CodigoVSC" esta el codigo para subir al la placa NODEMCU,
+el codigo esta hecho en "Visual Studio Code" con la extension Platform.io.
+
+El numero de telefono del chip que esta en el SIM800L es: 11-5663-5895.
+Porque quizas hay que cargarle credito en algun momento.
