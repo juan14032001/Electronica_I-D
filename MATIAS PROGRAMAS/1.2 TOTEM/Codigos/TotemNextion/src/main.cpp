@@ -5,7 +5,7 @@
 #define NEXTION_RX D8 // D8 CON TX DEL SIM808
 #include <SoftwareSerial.h>
 SoftwareSerial Nextion(NEXTION_RX, NEXTION_TX); // RX, TX
-
+void Enviar_Nextion(String);
 
 /* PANTALLA OLED */
 #include <SPI.h>
@@ -96,9 +96,10 @@ void setup()
   Serial.begin(9600);
   Serial.print("\n Iniciando...");
 
-  Nextion.begin(9600);
-
-  //--->
+  //---> Nextion
+Nextion.begin(9600);
+Enviar_Nextion("0");
+Enviar_Nextion("page Iniciar");
 
   //---> Pantalla OLED
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
@@ -146,7 +147,7 @@ void Luces_sin_wifi()
   {
     if (WiFi.status() != WL_CONNECTED)
     {
-      //Serial.print("\n Sin conexion, parpadeando...");
+      // Serial.print("\n Sin conexion, parpadeando...");
       int time = 50;
       for (int i = 0; i < 3; i++)
       {
@@ -336,10 +337,10 @@ void Pagina_wifi()
                   "</head>"
                   "<body>"
                   "<h1> - - - Ingresar red - - - </h1> <br>";
- /* OJO CAMBIE EL GET POR EL POST
- ANTES ESTABA ASI:
- pagina += "</form>"
-            "<form action='conectar' method='get'>" */
+  /* OJO CAMBIE EL GET POR EL POST
+  ANTES ESTABA ASI:
+  pagina += "</form>"
+             "<form action='conectar' method='get'>" */
   pagina += "</form>"
             "<form action='conectar' method='post'>"
             "SSID:"
@@ -437,13 +438,16 @@ void Lectura_Botones()
 
     Pantalla_Alerta(1);
 
+    //---> Nextion
+    Enviar_Nextion("page Bomberos");
+
     if (WiFi.status() != WL_CONNECTED)
       Serial.print("\n No se enviaron datos por falta de conexión");
     else
       Envio_Servidor("BOMBEROS");
     delay(4000);
-    
-    //Enviamos denuevo la pantalla de WiFi
+
+    // Enviamos denuevo la pantalla de WiFi
     if (WiFi.status() == WL_CONNECTED)
       Pantalla_conectado();
     else
@@ -462,13 +466,16 @@ void Lectura_Botones()
 
     Pantalla_Alerta(2);
 
+    //---> Nextion
+    Enviar_Nextion("page Ambulancia");
+
     if (WiFi.status() != WL_CONNECTED)
       Serial.print("\n No se enviaron datos por falta de conexión");
     else
       Envio_Servidor("AMBULANCIA");
     delay(4000);
 
-    //Enviamos denuevo la pantalla de WiFi
+    // Enviamos denuevo la pantalla de WiFi
     if (WiFi.status() == WL_CONNECTED)
       Pantalla_conectado();
     else
@@ -487,18 +494,20 @@ void Lectura_Botones()
 
     Pantalla_Alerta(3);
 
+    //---> Nextion
+    Enviar_Nextion("page Policia");
+
     if (WiFi.status() != WL_CONNECTED)
       Serial.print("\n No se enviaron datos por falta de conexión");
     else
       Envio_Servidor("POLICIA");
     delay(4000);
 
-  //Enviamos denuevo la pantalla de WiFi
+    // Enviamos denuevo la pantalla de WiFi
     if (WiFi.status() == WL_CONNECTED)
       Pantalla_conectado();
     else
       Pantalla_desconectado();
-
   }
 }
 /* Fin de funcion */
@@ -796,4 +805,18 @@ void Pantalla_error_conexion()
 
   display.display();
 }
+/* fin de funcion */
+
+/* Funcion ENVIAR A NEXTION */
+void Enviar_Nextion(String str)
+{
+  if (str.compareTo("0") != 0)
+  {
+    Serial.print("\n Enviando comando: " + str);
+    Nextion.print(str);
+  }
+  Nextion.write(0xff);
+  Nextion.write(0xff);
+  Nextion.write(0xff);
+  }
 /* fin de funcion */
