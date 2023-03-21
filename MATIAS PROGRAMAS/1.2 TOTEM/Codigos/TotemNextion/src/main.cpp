@@ -6,6 +6,10 @@
 #include <SoftwareSerial.h>
 SoftwareSerial Nextion(NEXTION_RX, NEXTION_TX); // RX, TX
 void Enviar_Nextion(String);
+void Nex_Totem_Conectado();
+void Nex_Totem_Desconectado();
+void Nex_Totem_EstaConectando();
+void Nex_Totem_ErrorConexion();
 
 /* PANTALLA OLED */
 #include <SPI.h>
@@ -94,12 +98,12 @@ void setup()
 {
   //---> Iniciamos SERIE:
   Serial.begin(9600);
-  Serial.print("\n Iniciando...");
+  // Serial.print("\n Iniciando...");
 
   //---> Nextion
-Nextion.begin(9600);
-Enviar_Nextion("0");
-Enviar_Nextion("page Iniciar");
+  Nextion.begin(9600);
+  Enviar_Nextion("0");
+  Enviar_Nextion("page Iniciar");
 
   //---> Pantalla OLED
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
@@ -147,6 +151,7 @@ void Luces_sin_wifi()
   {
     if (WiFi.status() != WL_CONNECTED)
     {
+
       // Serial.print("\n Sin conexion, parpadeando...");
       int time = 50;
       for (int i = 0; i < 3; i++)
@@ -178,10 +183,13 @@ void Leer_EEPROM()
   }
   EEPROM.get(dir_ssid, ssid);
   EEPROM.get(dir_pass, pass);
+  // Comentado para usar con nextion
+  /*
   Serial.print("\n--------------------------------");
   Serial.print("\n Datos leidos de la EEPROM:");
   Serial.print("\n SSID: " + String(ssid));
   Serial.print("\n PASS: " + String(pass));
+  */
 }
 
 void Configurar_servidor()
@@ -191,13 +199,15 @@ void Configurar_servidor()
   Servidor.on("/escanear", Escanear_redes);
   Servidor.on("/conectar", Conectar_nueva_red);
   Servidor.begin();
+  // Comentado para usar con nextion
+  /*
   Serial.println("\n Servidor iniciado");
+  */
 }
 
 /* Prueba para pasar de char a String */
 void Funcion_prueba()
 {
-  // #define TAM_CADENA 50
   int TAM_CADENA = 50;
   char cadena[TAM_CADENA];
 
@@ -212,9 +222,12 @@ void Funcion_prueba()
   }
 
   //---> Mostramos los valores (antes de hacer el pasaje):
+  // Comentado para usar con nextion
+  /*
   Serial.print("\n String inicio: " + string_origen);
   Serial.print("\n String vacio: " + string_destino);
   Serial.print("\n Cadena: " + String(cadena));
+  */
 
   TAM_STRING = string_origen.length(); // Largo del string
 
@@ -230,17 +243,23 @@ void Funcion_prueba()
   }
 
   //---> Mostramos los resultados
+  // Comentado para usar con nextion
+  /*
   Serial.print("\n ------------> Luego de convertir:");
   Serial.print("\n String inicio: " + string_origen);
   Serial.print("\n String vacio: " + string_destino);
   Serial.print("\n Cadena: " + String(cadena));
+  */
 }
 
 void Conectar_nueva_red()
 {
   String ssid_aux = "";
   String password_aux = "";
+  // Comentado para usar con nextion
+  /*
   Serial.print("\n Datos recibidos guardados!");
+  */
 
   ssid_aux = String(Servidor.arg("ssid"));
   password_aux = String(Servidor.arg("pass"));
@@ -254,11 +273,14 @@ void Conectar_nueva_red()
     pass[i] = password_aux[i]; // Copiamos el string a la cadena
   }
 
+  // Comentado para usar con nextion
+  /*
   Serial.print("\n -----------------------------------");
   Serial.print("\n Argumentos recibidos del server");
   Serial.print("\n ssid: " + String(ssid));
   Serial.print("\n pass: " + String(pass));
   Serial.print("\n -----------------------------------");
+*/
 
   EEPROM.put(dir_ssid, ssid);
   EEPROM.commit();
@@ -273,7 +295,8 @@ void Conectar_nueva_red()
 
 void Pagina_raiz()
 {
-  Serial.print("\n Enviando Pagina_raiz");
+  // Comentado para usar con nextion
+  // Serial.print("\n Enviando Pagina_raiz");
   Pagina_html = "<!DOCTYPE html>"
                 "<html>"
                 "<head>"
@@ -300,17 +323,17 @@ void Pagina_raiz()
 
 void Escanear_redes()
 {
-  Serial.print("\n Enviando Escanear_redes");
+  // Serial.print("\n Enviando Escanear_redes");
   int cant_redes = WiFi.scanNetworks(); // devuelve el número de redes encontradas
-  Serial.println("escaneo terminado");
+  // Serial.println("escaneo terminado");
   if (cant_redes == 0) // si no encuentra ninguna red
   {
-    Serial.println("no se encontraron redes");
+    // Serial.println("no se encontraron redes");
     mensaje_html = "no se encontraron redes";
   }
   else
   {
-    Serial.print("\n " + String(cant_redes) + " redes encontradas!");
+    // Serial.print("\n " + String(cant_redes) + " redes encontradas!");
     mensaje_html = "";
     mensaje_html = "<p> Redes encontradas: </p><br>";
     for (int i = 0; i < cant_redes; ++i)
@@ -319,7 +342,7 @@ void Escanear_redes()
       mensaje_html += "<p>" + String(i + 1) + ": " + WiFi.SSID(i) + " </p>\r\n";
       delay(20);
     }
-    Serial.println(mensaje_html);
+    // Serial.println(mensaje_html);
     Pagina_wifi();
     mensaje_html = "";
   }
@@ -327,7 +350,7 @@ void Escanear_redes()
 
 void Pagina_wifi()
 {
-  Serial.print("\n Enviando Pagina_wifi");
+  // Serial.print("\n Enviando Pagina_wifi");
   String boton_back = "<br><a href='/'>[Back]</a><br>";
   String pagina = "<!DOCTYPE html>"
                   "<html>"
@@ -359,9 +382,12 @@ void Conectar_wifi()
 {
   Leer_EEPROM(); // Leemos el SSID y PASS para conectar
   flag1 = 0;     // Para evitar que titile el amarillo!
+  // Comentado para usar con nextion
+  /*
   Serial.print("\n Conectando WIFI...");
   Serial.print("\n SSID: " + String(ssid));
   Serial.print("\n Password: " + String(pass));
+  */
   if (flag == 0)
   {
     WiFi.mode(WIFI_AP_STA);
@@ -387,25 +413,31 @@ void Conectar_wifi()
   { // No se pudo realizar la conexion. Iniciamos AP
     Pantalla_error_conexion();
     delay(4000);
-    Serial.print("\n Fallo la conexion a la red: " + String(ssid));
+    // Serial.print("\n Fallo la conexion a la red: " + String(ssid));
     Estado_red = "desconectado";
     // Iniciamos el AP:
     WiFi.mode(WIFI_AP);
     WiFi.softAP("Sensor_" + String(SensorID), passConf);
-    IPAddress myIP = WiFi.softAPIP();
-    Serial.print("\n\n Conectarse a la red: Sensor_" + String(SensorID));
-    Serial.print("\n Con la contraseña: " + String(passConf));
-    Serial.print("\n IP del access point: ");
-    Serial.println(myIP);
+    //IPAddress myIP = WiFi.softAPIP();
+    // Comentado para usar con nextion
+    /*
+      Serial.print("\n\n Conectarse a la red: Sensor_" + String(SensorID));
+      Serial.print("\n Con la contraseña: " + String(passConf));
+      Serial.print("\n IP del access point: ");
+      Serial.println(myIP);
+      */
     Pantalla_desconectado();
   }
   else
   { // Se realizo la conexion correctamente
     WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, pass);
-    Serial.print("\n Se conecto a la red: " + String(ssid) + " correctamente!");
-    Serial.print("\n Con la IP: ");
-    Serial.print(WiFi.localIP());
+    // Comentado para usar con nextion
+    /*
+      Serial.print("\n Se conecto a la red: " + String(ssid) + " correctamente!");
+      Serial.print("\n Con la IP: ");
+      Serial.print(WiFi.localIP());
+      */
     Estado_red = "conectado";
     Pantalla_conectado();
   }
@@ -429,9 +461,12 @@ void Lectura_Botones()
   if (Funcion_Boton_Retardo(BOTON_1, 100) > 0)
   {
     //---> Encendemos luces
-    Serial.print("\n -------------------------");
-    Serial.print("\n Boton 1: BOMBEROS");
-    Serial.print("\n ------------------------- \n\n");
+    // Comentado para usar con nextion
+    /*
+      Serial.print("\n -------------------------");
+      Serial.print("\n Boton 1: BOMBEROS");
+      Serial.print("\n ------------------------- \n\n");
+      */
     pixels.setBrightness(255);
     pixels.fill(pixels.Color(255, 0, 0), 0, 10); // Nos sirve para encender los led desde eL 0 al 10, con el valor RGB colocado entre parentesis.
     pixels.show();
@@ -442,7 +477,8 @@ void Lectura_Botones()
     Enviar_Nextion("page Bomberos");
 
     if (WiFi.status() != WL_CONNECTED)
-      Serial.print("\n No se enviaron datos por falta de conexión");
+      // Serial.print("\n No se enviaron datos por falta de conexión");
+      delay(2);
     else
       Envio_Servidor("BOMBEROS");
     delay(4000);
@@ -456,10 +492,12 @@ void Lectura_Botones()
 
   if (Funcion_Boton_Retardo(BOTON_2, 100) > 0)
   {
-
-    Serial.print("\n -------------------------");
-    Serial.print("\n Boton 2: AMBULANCIA");
-    Serial.print("\n ------------------------- \n\n");
+    // Comentado para usar con nextion
+    /*
+      Serial.print("\n -------------------------");
+      Serial.print("\n Boton 2: AMBULANCIA");
+      Serial.print("\n ------------------------- \n\n");
+      */
     pixels.setBrightness(255);
     pixels.fill(pixels.Color(0, 255, 0), 0, 10); // Nos sirve para encender los led desde el 0 al 10, con el valor RGB colocado entre parentesis.
     pixels.show();
@@ -470,7 +508,8 @@ void Lectura_Botones()
     Enviar_Nextion("page Ambulancia");
 
     if (WiFi.status() != WL_CONNECTED)
-      Serial.print("\n No se enviaron datos por falta de conexión");
+      delay(2);
+    // Serial.print("\n No se enviaron datos por falta de conexión");
     else
       Envio_Servidor("AMBULANCIA");
     delay(4000);
@@ -484,10 +523,12 @@ void Lectura_Botones()
 
   if (Funcion_Boton_Retardo(BOTON_3, 100) > 0)
   {
-
-    Serial.print("\n -------------------------");
-    Serial.print("\n Boton 3: POLICIA");
-    Serial.print("\n ------------------------- \n\n");
+    // Comentado para usar con nextion
+    /*
+      Serial.print("\n -------------------------");
+      Serial.print("\n Boton 3: POLICIA");
+      Serial.print("\n ------------------------- \n\n");
+      */
     pixels.setBrightness(255);
     pixels.fill(pixels.Color(0, 0, 255), 0, 10); // Nos sirve para encender los led desde el 0 al 10, con el valor RGB colocado entre parentesis.
     pixels.show();
@@ -498,7 +539,8 @@ void Lectura_Botones()
     Enviar_Nextion("page Policia");
 
     if (WiFi.status() != WL_CONNECTED)
-      Serial.print("\n No se enviaron datos por falta de conexión");
+      delay(2);
+    // Serial.print("\n No se enviaron datos por falta de conexión");
     else
       Envio_Servidor("POLICIA");
     delay(4000);
@@ -527,7 +569,7 @@ int Funcion_Boton_Retardo(int pulsador, int retardo_ms)
       delay(1);
       i++;
     }
-    Serial.print("\nSe presiono el pulsador GPIO: " + String(pulsador) + " durante " + String(i) + " milisegundos.");
+    // Serial.print("\nSe presiono el pulsador GPIO: " + String(pulsador) + " durante " + String(i) + " milisegundos.");
   }
   //------
   // Sin retardo
@@ -578,26 +620,35 @@ void Envio_Servidor(String dato)
   getData = "?dato=" + dato;
   linkCompleto = link + getData;
 
+  // Comentado para usar con nextion
+  /*
   Serial.print("LINK:");
   Serial.println(linkCompleto);
-
+*/
   http_1.begin(cliente_1, linkCompleto); /* Iniciamos */
 
-  int CodigoDeRespuesta = http_1.GET(); /*Codigo de error que responde el
+  //int CodigoDeRespuesta = http_1.GET(); 
+  /*Codigo de error que responde el
   sevidor; 200: exitosa 404: no encontrado 500: servidor no pudo responder*/
 
   String respuesta = http_1.getString(); /* Para obtener la propia respuesta del servidor, directamente*/
 
+  // Comentado para usar con nextion
+  /*
   Serial.print("\nCodigo de respuesta:");
   Serial.print(CodigoDeRespuesta);
   Serial.print("\n\n Respuesta:");
   Serial.println(respuesta);
+  */
 }
 /* Fin funcion */
 
 /* Funcion pantalla CONECTANDO... */
 void Pantalla_Conectando()
 {
+  //----> Nextion:
+  Nex_Totem_EstaConectando();
+
   const String SensorID = String(ESP.getChipId(), HEX);
   int time = 150;
   int x = 64, y = 45;
@@ -663,6 +714,9 @@ void Pantalla_Conectando()
 /* Funcion PANTALLA Conexion OK*/
 void Pantalla_conectado()
 {
+  //---> Nextion:
+  Nex_Totem_Conectado();
+
   display.clearDisplay();
   display.display();
   display.setTextColor(SSD1306_WHITE);
@@ -695,6 +749,8 @@ void Pantalla_conectado()
 /* Funcion PANTALLA Desconectada */
 void Pantalla_desconectado()
 {
+  //---> Nextion:
+  Nex_Totem_Desconectado();
 
   display.clearDisplay();
   display.display();
@@ -783,6 +839,9 @@ void Pantalla_Alerta(int alerta)
 /* Funcion error conexion pantalla */
 void Pantalla_error_conexion()
 {
+  //----> Nextion:
+  Nex_Totem_ErrorConexion();
+
   display.clearDisplay();
   display.display();
 
@@ -812,11 +871,81 @@ void Enviar_Nextion(String str)
 {
   if (str.compareTo("0") != 0)
   {
-    Serial.print("\n Enviando comando: " + str);
-    Nextion.print(str);
+    // Serial.print("\n Enviando comando: " + str);
+    // Nextion.print(str);
+    Serial.print(str);
   }
+  Serial.write(0xff);
+  Serial.write(0xff);
+  Serial.write(0xff);
+  /*
   Nextion.write(0xff);
   Nextion.write(0xff);
   Nextion.write(0xff);
-  }
+*/
+}
 /* fin de funcion */
+
+/* Funcion totem conectado */
+void Nex_Totem_Conectado()
+{
+  String aux = "";
+  Enviar_Nextion("0");
+  Enviar_Nextion("page Conectado");
+  //----
+  aux = "Texto2.txt=\"" + String(SensorID) + "\"";
+  Enviar_Nextion(aux);
+  //----
+  aux = "Texto4.txt=\"";
+  for (int i = 0; i < 50; i++)
+  {
+    if (ssid[i] != '0')
+      aux += ssid[i];
+  }
+  aux += "\"";
+  Enviar_Nextion(aux);
+  //----
+  aux = "Texto6.txt=\"" + WiFi.localIP().toString() + "\"";
+  Enviar_Nextion(aux);
+}
+/* fin de la funcion */
+
+/* Funcion totem DESconectado */
+void Nex_Totem_Desconectado()
+{
+  String aux = "";
+  Enviar_Nextion("0");
+  Enviar_Nextion("page Desconectado");
+  //----
+  aux = "Texto2.txt=\"Sensor_" + String(SensorID) + "\"";
+  Enviar_Nextion(aux);
+  //----
+  aux = "Texto4.txt=\"" + WiFi.softAPIP().toString() + "\"";
+  Enviar_Nextion(aux);
+}
+/* fin de la funcion */
+
+
+/* Funcion totem SE ESTA conectando */
+void Nex_Totem_EstaConectando()
+{
+  String aux = "";
+  Enviar_Nextion("0");
+  Enviar_Nextion("page Conectando");
+  //----
+  aux = "Texto2.txt=\"" + String(ssid) + "\"";
+  Enviar_Nextion(aux);
+  //----
+}
+/* fin de la funcion */
+
+/* Funcion Error Conexion */
+void Nex_Totem_ErrorConexion(){
+  String aux = "";
+  Enviar_Nextion("0");
+  Enviar_Nextion("page ErrorConexion");
+  //----
+  aux = "Texto2.txt=\"" + String(ssid) + "\"";
+  Enviar_Nextion(aux);
+  //----
+}
