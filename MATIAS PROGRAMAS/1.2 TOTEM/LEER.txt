@@ -5,4 +5,9 @@ de los pulsadores y las modificaciones que se deben realizar en la placa
 ambiente controlado para que todo funcione correctamente.
 
 En la carpeta "CodigoVSC" esta el codigo para subir al la placa NODEMCU,
-el codigo esta hecho en "Visual Studio Code" con la extension Platform.io.
+el codigo esta hecho en "Visual Studio Code" con la extension Platform.io. Este
+programa no tiene las configuraciones para la pantalla Nextion.
+
+En la carpeta "Codigo con Nextion" esta el programa para la NODEMCU (con las lineas
+de codigo para la pantalla Nextion) y el programa para la pantalla Nextion.
+
