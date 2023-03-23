@@ -1,0 +1,54 @@
+Para una futura mejora del codigo podemos hacer lo siguiente:
+(El programa esta en la carpeta:
+C:\Users\ADOX\Desktop\Carpeta Auxilar\Archivos auxiliares (notas, pruebas))
+-------------------------------------------------------------
+
+  String Sensor_ID = "638727";
+  String DATOS_POST = "{\"data\":{\"extraData\":{\"chipId\":\"" + Sensor_ID + "\",\"co2\":" + String(444) + ",\"ssid\":\"" + "Awifi" + "\",\"ip\":\"" + "1696969696" + "\",\"signal\":" + "60" + ",\"firmwareVersion\":\"" + "2.0" + "\"}}}";
+  String apn_SIM = "wap.gprs.unifon.com.ar"; // APN: "wap.gprs.unifon.com.ar" FUNCIONA BIEN PARA MOVISTAR!
+  String apn_user_SIM = "wap";               // APN-Username
+  String apn_pass_SIM = "wap";               // APN-Password
+  String URL_POST = "http://data.ambientecontrolado.com.ar/device/measure"; // URL for HTTP-POST-REQUEST
+
+  /* Armamos un vector de String donde tenemos cada comando y su respuesta esperada.
+  En la posicion "0"(ComandoRespuesta[0]) esta el primer comando y en la pos 1 la respuesta (ComandoRespuesta[1]).
+  Y asi sucesivamente, los pares siempre son comandos y los impares su respuesta.
+  Si estoy en la posicion "i", la respuesta a ese comando estara en la posicion "i+1" */
+
+  int tam2=34; //En esta variable ponemos la cantidad de comandos y respuestas (cantidad total de Strings en el vector)
+  //Ya que despues vamos a necesitarlo para saber hasta que posicion/indice debemos enviar comandos.
+
+  String ComandoRespuesta[]= {/*COMANDO 0:*/"AT",  /*RESPUESTA 0:*/"OK",  
+                              /*COMANDO 1:*/"AT+SAPBR=3,1,Contype,GPRS",  /*RESPUESTA 1:*/ "OK",
+                              /*COMANDO 2:*/"AT+SAPBR=3,1,APN," + apn_SIM,  /*RESPUESTA 2:*/ "OK",
+                              /*COMANDO 3:*/"AT+SAPBR=3,1,USER," + apn_user_SIM,  /*RESPUESTA 3:*/ "OK",
+                              /*COMANDO 4:*/"AT+SAPBR=3,1,PWD," + apn_pass_SIM,  /*RESPUESTA 4:*/ "OK",
+                              /*COMANDO 5:*/"AT+SAPBR=1,1",  /*RESPUESTA 5:*/ "OK",
+                              /*COMANDO 6:*/"AT+SAPBR=2,1",  /*RESPUESTA 6:*/ "+SAPBR:",
+                              /*COMANDO 7:*/"AT+HTTPINIT",  /*RESPUESTA 7:*/ "OK",
+                              /*COMANDO 8:*/"AT+HTTPPARA=CID,1",  /*RESPUESTA 8:*/ "OK",
+                              /*COMANDO 9:*/"AT+HTTPPARA=URL," + URL_POST,  /*RESPUESTA 9:*/ "OK",
+                              /*COMANDO 10:*/"AT+HTTPPARA=\"CONTENT\",\"application/json\"",  /*RESPUESTA 10:*/ "OK",
+                              /*COMANDO 11:*/"AT+HTTPDATA=" + (String)DATOS_POST.length() + ",10000",  /*RESPUESTA 11:*/ "DOWNLOAD",
+                              /*COMANDO 12:*/DATOS_POST,  /*RESPUESTA 12:*/ "OK",
+                              /*COMANDO 13:*/"AT+HTTPACTION=1",  /*RESPUESTA 13:*/ "+HTTPACTION:",
+                              /*COMANDO 14:*/"AT+HTTPREAD",  /*RESPUESTA 14:*/ "+HTTPREAD:",
+                              /*COMANDO 15:*/"AT+HTTPTERM",  /*RESPUESTA 15:*/ "OK",
+                              /*COMANDO 16:*/"AT+SAPBR=0,1",  /*RESPUESTA 16:*/ "OK"
+                              };
+
+
+  if (digitalRead(PIN) == LOW)
+  {
+    int j=0;
+    for (int i = 0; i < tam2; i+=2)
+    {
+      Serial.print("-" + String(j + 1) + ": " + ComandoRespuesta[i] + "\n");
+      Serial.print("-" + String(j + 1) + ": " + ComandoRespuesta[i+1] + "\n\n");
+      delay(10);
+      j++;
+    }
+
+    while (digitalRead(PIN) == LOW)
+      delay(1);
+  }

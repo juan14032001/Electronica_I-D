@@ -3,6 +3,7 @@
 /* PANTALLA NEXTION */
 #define NEXTION_TX D0 // D0 CON RX DEL SIM808
 #define NEXTION_RX D8 // D8 CON TX DEL SIM808
+
 #include <SoftwareSerial.h>
 SoftwareSerial Nextion(NEXTION_RX, NEXTION_TX); // RX, TX
 void Enviar_Nextion(String);
@@ -102,6 +103,7 @@ void setup()
 
   //---> Nextion
   Nextion.begin(9600);
+  delay(500);
   Enviar_Nextion("0");
   Enviar_Nextion("page Iniciar");
 
