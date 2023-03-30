@@ -66,7 +66,7 @@ int time_ant = 0;
 //---> NEOPIXEL
 #include <Adafruit_NeoPixel.h>
 #define PIN D3                                                  // Pin donde estan conectados los leds
-#define NUMPIXELS 10                                            // cantidad de pixeles qie tenemos conectados en seria
+#define NUMPIXELS 230                                            // cantidad de pixeles qie tenemos conectados en seria
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800); // creamos el objeto
 
 // Pines para los pulsadores:
@@ -113,8 +113,8 @@ void setup()
   //---> NeoPixel:
   pixels.begin(); // Inicializamos el objeto "pixels"
 
-  pixels.setBrightness(5);
-  pixels.fill(pixels.Color(100, 100, 100), 0, 10);
+  pixels.setBrightness(255);
+  pixels.fill(pixels.Color(255, 255, 255), 0, NUMPIXELS);
   pixels.show();
 
   //  pixels.clear(); // Apaga todos los leds
@@ -134,17 +134,19 @@ void setup()
 void loop()
 {
 
-  int time = millis();
+  //int time = millis();
 
   Servidor.handleClient(); /* Recibe las peticiones */
   Lectura_Botones();
   delay(10);
 
+  /*
   if ((time - time_ant) > 5000)
   {
     Luces_sin_wifi();
     time_ant = time;
   }
+  */
 }
 
 void Luces_sin_wifi()
@@ -159,7 +161,7 @@ void Luces_sin_wifi()
       for (int i = 0; i < 3; i++)
       {
         pixels.setBrightness(255);
-        pixels.fill(pixels.Color(255, 255, 0), 0, 10);
+        pixels.fill(pixels.Color(255, 255, 0), 0, NUMPIXELS);
         pixels.show();
         delay(time);
         pixels.clear();
@@ -433,8 +435,8 @@ void Lectura_Botones()
 {
 
   //---> LUZ SUAVE
-  pixels.setBrightness(5);
-  pixels.fill(pixels.Color(100, 100, 100), 0, 10);
+  pixels.setBrightness(255);
+  pixels.fill(pixels.Color(255, 255, 255), 0, NUMPIXELS);
   pixels.show();
   /*
     //---> APAGAR TODOS LOS LEDS
@@ -450,7 +452,7 @@ void Lectura_Botones()
     Serial.print("\n ------------------------- \n\n");
 
     pixels.setBrightness(255);
-    pixels.fill(pixels.Color(255, 0, 0), 0, 10); // Nos sirve para encender los led desde eL 0 al 10, con el valor RGB colocado entre parentesis.
+    pixels.fill(pixels.Color(255, 0, 0), 0, NUMPIXELS); // Nos sirve para encender los led desde eL 0 al 10, con el valor RGB colocado entre parentesis.
     pixels.show();
 
     Pantalla_Alerta(1);
@@ -479,7 +481,7 @@ void Lectura_Botones()
     Serial.print("\n ------------------------- \n\n");
 
     pixels.setBrightness(255);
-    pixels.fill(pixels.Color(0, 255, 0), 0, 10); // Nos sirve para encender los led desde el 0 al 10, con el valor RGB colocado entre parentesis.
+    pixels.fill(pixels.Color(0, 255, 0), 0, NUMPIXELS); // Nos sirve para encender los led desde el 0 al 10, con el valor RGB colocado entre parentesis.
     pixels.show();
 
     Pantalla_Alerta(2);
@@ -507,7 +509,7 @@ void Lectura_Botones()
     Serial.print("\n ------------------------- \n\n");
 
     pixels.setBrightness(255);
-    pixels.fill(pixels.Color(0, 0, 255), 0, 10); // Nos sirve para encender los led desde el 0 al 10, con el valor RGB colocado entre parentesis.
+    pixels.fill(pixels.Color(0, 0, 255), 0, NUMPIXELS); // Nos sirve para encender los led desde el 0 al 10, con el valor RGB colocado entre parentesis.
     pixels.show();
 
     Pantalla_Alerta(3);
@@ -920,3 +922,6 @@ void Nex_Totem_ErrorConexion()
   Enviar_Nextion(aux);
   //----
 }
+
+//-------------------------------------------
+
