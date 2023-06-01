@@ -1,0 +1,3 @@
+Added Component: Designator=P8(Val-u-lok_2pin)
+Added Pin To Net: NetName=12V Pin=P8-1
+Added Pin To Net: NetName=GND Pin=P8-2

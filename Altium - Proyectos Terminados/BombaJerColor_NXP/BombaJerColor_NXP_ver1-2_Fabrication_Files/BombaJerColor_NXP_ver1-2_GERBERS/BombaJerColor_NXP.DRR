@@ -1,0 +1,22 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: BombaJerColor_NXP.PcbDoc   22/12/2021  15:38:36
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : BombaJerColor_NXP.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      12mil (0.305mm)                                           Round             121       PTH        32.85inch (834.28mm)
+T2      16mil (0.406mm)                                           Round             5         PTH        0.26inch (6.60mm)
+T3      16mil (0.406mm)                                           Round             143       PTH        43.16inch (1096.28mm)
+T4      28mil (0.7mm)                                             Round             6         PTH        0.93inch (23.50mm)
+T5      28mil (0.711mm)                                           Round             2         PTH        0.30inch (7.62mm)
+T6      35mil (0.9mm)                                             Round             91        PTH        27.58inch (700.46mm)
+T7      39mil (1mm)                                               Round             26        PTH        3.00inch (76.20mm)
+T8      49mil (1.25mm)                                            Round             2         PTH        0.78inch (19.90mm)
+T9      118mil (3mm)                                              Round             4         PTH        20.04inch (509.06mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              400
+
+Total Processing Time (hh:mm:ss) : 00:00:01

@@ -1,0 +1,14 @@
+------------------------------------------------------------
+Design Hierarchy Report for BombaJerColor_NXP.PrjPCB
+-- 27/4/2018
+-- 3:26:29 p. m.
+------------------------------------------------------------
+
+BombaJerColorNXP_TOP          SCH        (BombaJerColorNXP_TOP.SchDoc)
+    ComSerie_USB_WIFI         SCH        (ComSerie_USB_WIFI.SchDoc)
+    ControlCeldaDeCarga       SCH        (ControlCeldaDeCarga.SchDoc)
+    ControlDisplayTFT         SCH        (ControlDisplayTFT.SchDoc)
+    CPU_LPC1769               SCH        (CPU_LPC1769.SchDoc)
+    DriverMotorPAP            SCH        (DriverMotorPAP.SchDoc)
+    EntradasSalidas           SCH        (EntradasSalidas.SchDoc)
+    FuentesReguladas          SCH        (FuentesReguladas.SchDoc)

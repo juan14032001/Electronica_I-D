@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=SOLPRES Pin=P6-2
+Removed Pin From Net: NetName=SOLDESC Pin=P6-4
+Removed Pin From Net: NetName=SOL2020 Pin=P6-6
+Removed Pin From Net: NetName=SOLAUX Pin=P6-8
+Removed Pin From Net: NetName=12V Pin=P6-9
+Removed Pin From Net: NetName=SOLPPEEP Pin=P6-10
+Removed Pin From Net: NetName=12V Pin=P6-11
+Removed Pin From Net: NetName=SOLPFLU Pin=P6-12
+Removed Pin From Net: NetName=12V Pin=P6-13
+Change Component DesignItemId : Designator=P6 Old DesignItemId=Header 7X2 New DesignItemId=Header 7X2A
+Change Component Footprint: Designator=P14 Old Footprint=HDR1X2 New Footprint=Val-u-lok_2pin
+Change Component Footprint: Designator=P15 Old Footprint=HDR1X2 New Footprint=Val-u-lok_2pin
+Change Component Footprint: Designator=P16 Old Footprint=HDR1X2 New Footprint=Val-u-lok_2pin
+Change Component Footprint: Designator=P17 Old Footprint=HDR1X2 New Footprint=Val-u-lok_2pin
+Change Component Footprint: Designator=P18 Old Footprint=HDR1X2 New Footprint=Val-u-lok_2pin
+Change Component Footprint: Designator=P19 Old Footprint=HDR1X2 New Footprint=Val-u-lok_2pin
+Change Component Footprint: Designator=P20 Old Footprint=HDR1X2 New Footprint=Val-u-lok_2pin
+Change Component Footprint: Designator=P21 Old Footprint=HDR1X2 New Footprint=Val-u-lok_2pin
+Change Component Footprint: Designator=P6 Old Footprint=HDR2X7 New Footprint=Val-u-lok_14pin
+Change Component Comment : Designator=P6 Old Comment=Header 7X2 New Comment=Header 7X2A
+Added Pin To Net: NetName=12V Pin=P6-2
+Added Pin To Net: NetName=12V Pin=P6-4
+Added Pin To Net: NetName=12V Pin=P6-6
+Added Pin To Net: NetName=SOLPRES Pin=P6-8
+Added Pin To Net: NetName=SOLDESC Pin=P6-9
+Added Pin To Net: NetName=SOL2020 Pin=P6-10
+Added Pin To Net: NetName=SOLAUX Pin=P6-11
+Added Pin To Net: NetName=SOLPPEEP Pin=P6-12
+Added Pin To Net: NetName=SOLPFLU Pin=P6-13

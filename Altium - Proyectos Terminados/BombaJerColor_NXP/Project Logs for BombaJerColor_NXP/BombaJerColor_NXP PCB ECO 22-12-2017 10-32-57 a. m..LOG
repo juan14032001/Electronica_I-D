@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=U8-0
+Change Component Comment : Designator=R41 Old Comment=1M New Comment=50k
+Change Component Comment : Designator=R77 Old Comment=5,1K New Comment=5.1K
+Change Component Comment : Designator=R43 Old Comment=150K New Comment=100k
+Change Component Comment : Designator=R50 Old Comment=150K New Comment=100k

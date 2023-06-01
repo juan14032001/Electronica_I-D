@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VBAT Pin=P21-1
+Added Component: Designator=D11(SOD128)
+Added Component: Designator=D12(SOD128)
+Added Pin To Net: NetName=VBAT Pin=D11-2
+Added Pin To Net: NetName=VIN Pin=D12-2
+Added Pin To Net: NetName=NetD11_1 Pin=D11-1
+Added Pin To Net: NetName=NetD11_1 Pin=D12-1
+Added Pin To Net: NetName=NetD11_1 Pin=P21-1
+Added Net: Name=NetD11_1

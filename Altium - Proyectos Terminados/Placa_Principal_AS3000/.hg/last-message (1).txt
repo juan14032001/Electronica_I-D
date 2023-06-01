@@ -1,0 +1,1 @@
+Comienza versionado de la placa. Utiliza como microcontrolador un DP512. Esta placa ya fue ruteada como ver 1, se generaron los Gerbers y se mandaron a fabricar 10 placas

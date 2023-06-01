@@ -1,0 +1,1 @@
+Rev.2: Se actualizó el PCB de acuerdo a los cambios realizados en el circuito electrico. Se actualizó el listado de componentes. Se generaron los archivos de fabricación para cotizar en Zhanfa.

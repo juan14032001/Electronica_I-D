@@ -1,0 +1,1 @@
+Adecuacion del rotulo para mostrar la referencia a la Arquitectura de la Maquina AS3000

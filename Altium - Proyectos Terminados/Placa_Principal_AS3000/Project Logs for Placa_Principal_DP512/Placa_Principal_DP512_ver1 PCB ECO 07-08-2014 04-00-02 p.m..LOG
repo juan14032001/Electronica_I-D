@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=GND Pin=C61-1
+Removed Pin From Net: NetName=12V Pin=C61-2
+Removed Pin From Net: NetName=GND Pin=C62-2
+Removed Pin From Net: NetName=GND Pin=R37-2
+Removed Pin From Net: NetName=GND Pin=U12-3
+Removed Pin From Net: NetName=GND Pin=U12-4
+Removed Pin From Net: NetName=12V Pin=U12-8
+Added Component: Designator=FB12(INDC1608N)
+Added Pin To Net: NetName=GNDA Pin=C61-1
+Added Pin To Net: NetName=GNDA Pin=C62-2
+Added Pin To Net: NetName=12V Pin=FB12-1
+Added Pin To Net: NetName=GNDA Pin=R37-2
+Added Pin To Net: NetName=GNDA Pin=U12-3
+Added Pin To Net: NetName=GNDA Pin=U12-4
+Added Pin To Net: NetName=NetC61_2 Pin=C61-2
+Added Pin To Net: NetName=NetC61_2 Pin=FB12-2
+Added Pin To Net: NetName=NetC61_2 Pin=U12-8
+Added Net: Name=NetC61_2

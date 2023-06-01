@@ -1,0 +1,5 @@
+Change Component Footprint: Designator=P22 Old Footprint=HDR1X3 New Footprint=CON1X3
+Change Component Footprint: Designator=P23 Old Footprint=HDR1X3 New Footprint=CON1X3
+Change Component Footprint: Designator=PT3 Old Footprint=HDR1X3 New Footprint=CON1X3
+Change Component Footprint: Designator=U8 Old Footprint=PTN78020 New Footprint=PTN78020_Thru-Hole
+Change Component Footprint: Designator=U11 Old Footprint=PTN78020 New Footprint=PTN78020_Thru-Hole

@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=VREF Pin=U14-2
+Removed Pin From Net: NetName=GNDA Pin=U14-4
+Removed Pin From Net: NetName=VREF Pin=U14-6
+Removed Pin From Net: NetName=+5VADC Pin=U14-7
+Change Component DesignItemId : Designator=U14 Old DesignItemId=Op Amp New DesignItemId=OPA333AIDBVR
+Change Component Footprint: Designator=U14 Old Footprint=S08A_M New Footprint=SOT-23-5
+Added Pin To Net: NetName=VREF Pin=U14-1
+Added Pin To Net: NetName=GNDA Pin=U14-2
+Added Pin To Net: NetName=VREF Pin=U14-4
+Added Pin To Net: NetName=+5VADC Pin=U14-5

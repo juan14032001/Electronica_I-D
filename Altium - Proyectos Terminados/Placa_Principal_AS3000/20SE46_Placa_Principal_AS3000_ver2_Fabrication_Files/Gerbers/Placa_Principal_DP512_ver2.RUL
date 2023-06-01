@@ -1,0 +1,15 @@
+DRC Rules Export File for PCB: C:\Users\MiguelM\Dropbox\Adox Proyectos\Maquina AS3000\Placa_Principal_AS3000\Placa_Principal_AS3000_ver2_Fabrication_Files\Gerbers\Placa_Principal_DP512_ver2.PcbDoc
+RuleKind=Width|RuleName=Schematic Width Constraint_7|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_6|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_5|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_4|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_3|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_2|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint_1|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Schematic Width Constraint|Scope=Board|Minimum=10.00
+RuleKind=Width|RuleName=Width_GND|Scope=Board|Minimum=10.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=10.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Width|RuleName=Width_AGND|Scope=Board|Minimum=10.00

@@ -1,0 +1,50 @@
+Removed Pin From Net: NetName=GND Pin=U3-24
+Removed Pin From Net: NetName=GND Pin=U3-25
+Removed Pin From Net: NetName=GND Pin=U3-26
+Removed Pin From Net: NetName=GND Pin=U3-27
+Removed Pin From Net: NetName=GND Pin=U3-28
+Added Component: Designator=D17(CD1608-0603)
+Added Component: Designator=D18(CD1608-0603)
+Added Component: Designator=D19(CD1608-0603)
+Added Component: Designator=D20(CD1608-0603)
+Added Component: Designator=D21(CD1608-0603)
+Added Component: Designator=R57(RESC1608N)
+Added Component: Designator=R58(RESC1608N)
+Added Component: Designator=R59(RESC1608N)
+Added Component: Designator=R60(RESC1608N)
+Added Component: Designator=R61(RESC1608N)
+Added Pin To Net: NetName=GND Pin=D17-2
+Added Pin To Net: NetName=GND Pin=D18-2
+Added Pin To Net: NetName=GND Pin=D19-2
+Added Pin To Net: NetName=GND Pin=D20-2
+Added Pin To Net: NetName=GND Pin=D21-2
+Added Pin To Net: NetName=NetD17_1 Pin=D17-1
+Added Pin To Net: NetName=NetD17_1 Pin=R57-2
+Added Net: Name=NetD17_1
+Added Pin To Net: NetName=NetD18_1 Pin=D18-1
+Added Pin To Net: NetName=NetD18_1 Pin=R58-2
+Added Net: Name=NetD18_1
+Added Pin To Net: NetName=NetD19_1 Pin=D19-1
+Added Pin To Net: NetName=NetD19_1 Pin=R59-2
+Added Net: Name=NetD19_1
+Added Pin To Net: NetName=NetD20_1 Pin=D20-1
+Added Pin To Net: NetName=NetD20_1 Pin=R60-2
+Added Net: Name=NetD20_1
+Added Pin To Net: NetName=NetD21_1 Pin=D21-1
+Added Pin To Net: NetName=NetD21_1 Pin=R61-2
+Added Net: Name=NetD21_1
+Added Pin To Net: NetName=NetR57_1 Pin=R57-1
+Added Pin To Net: NetName=NetR57_1 Pin=U3-28
+Added Net: Name=NetR57_1
+Added Pin To Net: NetName=NetR58_1 Pin=R58-1
+Added Pin To Net: NetName=NetR58_1 Pin=U3-27
+Added Net: Name=NetR58_1
+Added Pin To Net: NetName=NetR59_1 Pin=R59-1
+Added Pin To Net: NetName=NetR59_1 Pin=U3-26
+Added Net: Name=NetR59_1
+Added Pin To Net: NetName=NetR60_1 Pin=R60-1
+Added Pin To Net: NetName=NetR60_1 Pin=U3-25
+Added Net: Name=NetR60_1
+Added Pin To Net: NetName=NetR61_1 Pin=R61-1
+Added Pin To Net: NetName=NetR61_1 Pin=U3-24
+Added Net: Name=NetR61_1

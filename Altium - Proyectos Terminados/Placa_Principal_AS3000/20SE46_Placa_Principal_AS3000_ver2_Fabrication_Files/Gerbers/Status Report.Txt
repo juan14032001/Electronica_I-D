@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Free Documents]
+   Generated File[Placa_Principal_DP512_ver2.TXT]
+   Generated File[Placa_Principal_DP512_ver2.DRL]
+   Generated File[Placa_Principal_DP512_ver2.LDP]
+   Generated File[Placa_Principal_DP512_ver2.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 09:44:29 a.m. On 06/07/2015

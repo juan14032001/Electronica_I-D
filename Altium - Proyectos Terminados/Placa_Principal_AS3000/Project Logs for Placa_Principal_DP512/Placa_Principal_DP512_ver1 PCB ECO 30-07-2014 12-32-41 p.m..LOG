@@ -1,0 +1,62 @@
+Removed Pin From Net: NetName=SOLPRES Pin=P6-3
+Removed Pin From Net: NetName=12V Pin=P7-1
+Removed Pin From Net: NetName=SOLDESC Pin=P7-3
+Removed Pin From Net: NetName=12V Pin=P8-1
+Removed Pin From Net: NetName=SOL2020 Pin=P8-3
+Removed Pin From Net: NetName=12V Pin=P9-1
+Removed Pin From Net: NetName=SOLAUX Pin=P9-3
+Removed Pin From Net: NetName=12V Pin=P10-1
+Removed Pin From Net: NetName=SOLPPEEP Pin=P10-3
+Removed Pin From Net: NetName=12V Pin=P11-1
+Removed Pin From Net: NetName=SOLPFLU Pin=P11-3
+Removed Pin From Net: NetName=12V Pin=P12-1
+Removed Pin From Net: NetName=SOLPAUX Pin=P12-3
+Change Component DesignItemId : Designator=P7 Old DesignItemId=Header 3 New DesignItemId=Header 2
+Change Component DesignItemId : Designator=P6 Old DesignItemId=Header 3 New DesignItemId=Header 7X2
+Change Component Footprint: Designator=P7 Old Footprint=CON1X3 New Footprint=CON1X2
+Change Component Footprint: Designator=P6 Old Footprint=CON1X3 New Footprint=HDR2X7
+Change Component Footprint: Designator=P13 Old Footprint=HDR1X2 New Footprint=CON1X2
+Change Component Comment : Designator=P7 Old Comment=SOL_DESC New Comment=Header 2
+Change Component Comment : Designator=P6 Old Comment=SOL_PRES New Comment=Header 7X2
+Added Component: Designator=C80(CAPC2012N)
+Added Component: Designator=R50(RESC2012N)
+Added Component: Designator=R51(RESC2012N)
+Added Component: Designator=R52(RESC2012N)
+Added Component: Designator=U14(S08A_M)
+Added Pin To Net: NetName=GNDA Pin=C80-1
+Added Pin To Net: NetName=+5VADC Pin=C80-2
+Added Pin To Net: NetName=SOLPRES Pin=P6-2
+Added Pin To Net: NetName=12V Pin=P6-3
+Added Pin To Net: NetName=SOLDESC Pin=P6-4
+Added Pin To Net: NetName=12V Pin=P6-5
+Added Pin To Net: NetName=SOL2020 Pin=P6-6
+Added Pin To Net: NetName=12V Pin=P6-7
+Added Pin To Net: NetName=SOLAUX Pin=P6-8
+Added Pin To Net: NetName=12V Pin=P6-9
+Added Pin To Net: NetName=SOLPPEEP Pin=P6-10
+Added Pin To Net: NetName=12V Pin=P6-11
+Added Pin To Net: NetName=SOLPFLU Pin=P6-12
+Added Pin To Net: NetName=12V Pin=P6-13
+Added Pin To Net: NetName=SOLPAUX Pin=P6-14
+Added Pin To Net: NetName=GNDA Pin=R50-1
+Added Pin To Net: NetName=+5VADC Pin=R51-2
+Added Pin To Net: NetName=GNDA Pin=R52-1
+Added Pin To Net: NetName=GNDA Pin=U14-4
+Added Pin To Net: NetName=+5VADC Pin=U14-7
+Added Pin To Net: NetName=NetP7_1 Pin=P7-1
+Added Pin To Net: NetName=NetP7_1 Pin=U13-3
+Added Net: Name=NetP7_1
+Added Pin To Net: NetName=NetR51_1 Pin=R51-1
+Added Pin To Net: NetName=NetR51_1 Pin=R52-2
+Added Pin To Net: NetName=NetR51_1 Pin=U14-3
+Added Net: Name=NetR51_1
+Added Pin To Net: NetName=PAD11-O2CELL Pin=R50-2
+Added Pin To Net: NetName=PAD11-O2CELL Pin=U3-74
+Added Pin To Net: NetName=PAD11-O2CELL Pin=U13-6
+Added Net: Name=PAD11-O2CELL
+Added Pin To Net: NetName=VREF Pin=P7-2
+Added Pin To Net: NetName=VREF Pin=U13-2
+Added Pin To Net: NetName=VREF Pin=U13-5
+Added Pin To Net: NetName=VREF Pin=U14-2
+Added Pin To Net: NetName=VREF Pin=U14-6
+Added Net: Name=VREF

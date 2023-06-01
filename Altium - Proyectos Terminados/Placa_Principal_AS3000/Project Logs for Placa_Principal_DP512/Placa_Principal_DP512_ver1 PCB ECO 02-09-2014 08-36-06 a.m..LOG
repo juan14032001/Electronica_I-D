@@ -1,0 +1,23 @@
+Added Component: Designator=P9(HDR2X5)
+Added Pin To Net: NetName=GND Pin=P9-8
+Added Pin To Net: NetName=VCC Pin=P9-9
+Added Pin To Net: NetName=GND Pin=P9-10
+Added Pin To Net: NetName=PAD5-O2CELL Pin=R50-2
+Added Pin To Net: NetName=PAD5-O2CELL Pin=U3-77
+Added Pin To Net: NetName=PAD5-O2CELL Pin=U13-6
+Added Net: Name=PAD5-O2CELL
+Added Pin To Net: NetName=PAD8-BTNALARM Pin=P9-1
+Added Pin To Net: NetName=PAD8-BTNALARM Pin=U3-68
+Added Net: Name=PAD8-BTNALARM
+Added Pin To Net: NetName=PAD11-ENCSW Pin=P9-4
+Added Pin To Net: NetName=PAD11-ENCSW Pin=U3-74
+Added Net: Name=PAD11-ENCSW
+Added Pin To Net: NetName=PAD12-ENC1 Pin=P9-5
+Added Pin To Net: NetName=PAD12-ENC1 Pin=U3-76
+Added Net: Name=PAD12-ENC1
+Added Pin To Net: NetName=PAD13-ENC2 Pin=P9-6
+Added Pin To Net: NetName=PAD13-ENC2 Pin=U3-78
+Added Net: Name=PAD13-ENC2
+Added Pin To Net: NetName=PAD14-BTNMENU Pin=P9-7
+Added Pin To Net: NetName=PAD14-BTNMENU Pin=U3-80
+Added Net: Name=PAD14-BTNMENU

@@ -12,8 +12,8 @@ en la pantalla OLED el ancho de los caracteres (y el espacio) es:
 display.setTextSize(2); ---> tamaño 12 (letra y espacio)
 display.setTextSize(1); ---> tamaño 6 (letra y espacio)
 */
-
-#define PIN_SALIDA D8 // Colocar en "D3" el pin que queremos utilizar como salida
+#define PIN_BUZZER D3 
+#define PIN_SALIDA D8 
 #define RETARDO_REINICIO 2000
 
 #define ANCHO_PANTALLA 128 // Ancho pantalla OLED
@@ -50,6 +50,7 @@ void Funcion_Pantalla_Fin();
 void Funcion_Pantalla_Con_Reloj(int, int, int, int);
 void Funcion_Pantalla_Pausada(int, int, int);
 int Funcion_Boton_Retardo2(int);
+void Funcion_Pitido(int);
 // Fin de declaracion de funciones
 
 void setup()
@@ -60,6 +61,7 @@ void setup()
   pinMode(D6, INPUT_PULLUP);
   pinMode(D7, INPUT_PULLUP);
 
+  pinMode(PIN_BUZZER, OUTPUT);
   pinMode(PIN_SALIDA, OUTPUT);
 
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
@@ -71,6 +73,8 @@ void setup()
   EEPROM.get(dir_tiempo, tiempo_litro);
   if (tiempo_litro < 1 || tiempo_litro > 999)
     tiempo_litro = 1.25;
+
+  Funcion_Pitido(1);
 
   /*
     EEPROM.get(dir_velocidad_motor, velocidad_motor);
@@ -593,6 +597,8 @@ void Funcion_Boton_Inicio()
     while (digitalRead(BOTONES[BOTON_ON]) == LOW)
       delay(1);
 
+    Funcion_Pitido(1);
+
     //------- IMPORTANTE ---------------
     int tiempo;
     int tiempo_ant;
@@ -662,8 +668,10 @@ void Funcion_Boton_Inicio()
         /* Verificamos si se presiono el boton pausa: */
         pausa = 0;
         pausa = Funcion_Boton_Retardo2(BOTON_ON);
+        
         if (pausa == 1)
         { // Se presiono sin retardo
+          Funcion_Pitido(1);
           pausa = 0;
           while (pausa == 0)
           {
@@ -682,6 +690,7 @@ void Funcion_Boton_Inicio()
           frenar = 1;
           digitalWrite(PIN_SALIDA, LOW); // APAGO LA BOMBA
           Funcion_Pantalla_Fin();
+          Funcion_Pitido(3);
         }
         /* Terminamos de verificar boton pausa*/
       }
@@ -881,6 +890,18 @@ int Funcion_Boton_Retardo2(int codigo_boton)
     delay(1);
   }
   return retorno;
+}
+
+
+void Funcion_Pitido(int N)
+{
+  for(int i=0;i<N;i++)
+  {
+    digitalWrite(PIN_BUZZER,HIGH);
+    delay(200);
+    digitalWrite(PIN_BUZZER,LOW);
+    delay(100);
+  }
 }
 //--- Fin de la función
 //***********************************************

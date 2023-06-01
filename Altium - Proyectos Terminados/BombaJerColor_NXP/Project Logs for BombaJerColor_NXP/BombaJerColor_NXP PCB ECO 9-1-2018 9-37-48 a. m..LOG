@@ -1,0 +1,57 @@
+Removed Pin From Net: NetName=+3.3V Pin=LS1-1
+Removed Pin From Net: NetName=NetP3_4 Pin=R21-1
+Removed Pin From Net: NetName=PULSOAC Pin=R21-2
+Removed Pin From Net: NetName=PULSOAC Pin=R23-1
+Removed Pin From Net: NetName=NetP16_3 Pin=U1-90
+Change Component Comment : Designator=R23 Old Comment=3.9K New Comment=4.7k
+Change Component Comment : Designator=R21 Old Comment=6.8K New Comment=50
+Added Component: Designator=C51(CAPC2012N)
+Added Component: Designator=C52(CAPC3216N)
+Added Component: Designator=C53(CAPC2012N)
+Added Component: Designator=R78(RESC1608N)
+Added Component: Designator=R79(RESC2012N)
+Added Component: Designator=R80(RESC2012N)
+Added Component: Designator=U11(mini-flat)
+Added Component: Designator=U12(SOT_23)
+Added Component: Designator=U13(SOT_23)
+Added Component: Designator=U14(SOT_23)
+Added Component: Designator=U15(SOT353-5N)
+Added Pin To Net: NetName=GND Pin=C51-1
+Added Pin To Net: NetName=ADPOTTAMJER Pin=C51-2
+Added Pin To Net: NetName=GND Pin=C52-1
+Added Pin To Net: NetName=+3.3V Pin=C52-2
+Added Pin To Net: NetName=NetP16_3 Pin=C53-1
+Added Pin To Net: NetName=GND Pin=C53-2
+Added Pin To Net: NetName=VCC Pin=LS1-1
+Added Pin To Net: NetName=PULSOAC Pin=R21-1
+Added Pin To Net: NetName=+3.3V Pin=R78-1
+Added Pin To Net: NetName=CS_EEPROM Pin=R78-2
+Added Pin To Net: NetName=NetP3_4 Pin=R79-1
+Added Pin To Net: NetName=GND Pin=U11-2
+Added Pin To Net: NetName=VCC Pin=U11-4
+Added Pin To Net: NetName=NetFB2_2 Pin=U12-1
+Added Pin To Net: NetName=NetFB4_2 Pin=U12-2
+Added Pin To Net: NetName=GND Pin=U12-3
+Added Pin To Net: NetName=NetFB5_2 Pin=U13-1
+Added Pin To Net: NetName=NetFB3_1 Pin=U13-2
+Added Pin To Net: NetName=GND Pin=U13-3
+Added Pin To Net: NetName=NetFB7_2 Pin=U14-1
+Added Pin To Net: NetName=NetFB8_2 Pin=U14-2
+Added Pin To Net: NetName=GND Pin=U14-3
+Added Pin To Net: NetName=NetP16_3 Pin=U15-2
+Added Pin To Net: NetName=GND Pin=U15-3
+Added Pin To Net: NetName=+3.3V Pin=U15-5
+Change Net Name : Old Net Name=NetP16_3 New Net Name=NetC53_1
+Added Pin To Net: NetName=NetR21_2 Pin=R21-2
+Added Pin To Net: NetName=NetR21_2 Pin=R23-1
+Added Pin To Net: NetName=NetR21_2 Pin=U11-3
+Added Net: Name=NetR21_2
+Added Pin To Net: NetName=NetR79_2 Pin=R79-2
+Added Pin To Net: NetName=NetR79_2 Pin=U11-1
+Added Net: Name=NetR79_2
+Added Pin To Net: NetName=NetR80_1 Pin=R80-1
+Added Pin To Net: NetName=NetR80_1 Pin=U15-4
+Added Net: Name=NetR80_1
+Added Pin To Net: NetName=NetR80_2 Pin=R80-2
+Added Pin To Net: NetName=NetR80_2 Pin=U1-90
+Added Net: Name=NetR80_2

@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Free Documents]
+   Generated File[BombaJerColor_NXP.TXT]
+   Generated File[BombaJerColor_NXP.LDP]
+   Generated File[BombaJerColor_NXP.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 15:38:37 On 22/12/2021

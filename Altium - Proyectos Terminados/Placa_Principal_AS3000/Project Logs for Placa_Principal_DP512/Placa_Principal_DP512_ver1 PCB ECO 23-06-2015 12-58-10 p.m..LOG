@@ -1,0 +1,218 @@
+Removed Pin From Net: NetName=GND Pin=C21-1
+Removed Pin From Net: NetName=GND Pin=C24-1
+Removed Pin From Net: NetName=GND Pin=C25-1
+Removed Pin From Net: NetName=GND Pin=C26-1
+Removed Pin From Net: NetName=GND Pin=C27-1
+Removed Pin From Net: NetName=SOLPRES Pin=D1-1
+Removed Pin From Net: NetName=12V Pin=D1-2
+Removed Pin From Net: NetName=SOLDESC Pin=D2-1
+Removed Pin From Net: NetName=12V Pin=D2-2
+Removed Pin From Net: NetName=SOL2020 Pin=D3-1
+Removed Pin From Net: NetName=12V Pin=D3-2
+Removed Pin From Net: NetName=SOLAUX Pin=D4-1
+Removed Pin From Net: NetName=12V Pin=D4-2
+Removed Pin From Net: NetName=SOLPPEEP Pin=D5-1
+Removed Pin From Net: NetName=12V Pin=D5-2
+Removed Pin From Net: NetName=SOLPFLU Pin=D6-1
+Removed Pin From Net: NetName=12V Pin=D6-2
+Removed Pin From Net: NetName=SOLPAUX Pin=D7-1
+Removed Pin From Net: NetName=12V Pin=D7-2
+Removed Pin From Net: NetName=NetD8_1 Pin=D8-1
+Removed Pin From Net: NetName=VMON Pin=D8-2
+Removed Pin From Net: NetName=VBAT Pin=D11-2
+Removed Pin From Net: NetName=VIN Pin=D12-2
+Removed Pin From Net: NetName=VIN Pin=P14-1
+Removed Pin From Net: NetName=GNDP Pin=P14-2
+Removed Pin From Net: NetName=VBAT Pin=P17-1
+Removed Pin From Net: NetName=GNDP Pin=P17-2
+Removed Pin From Net: NetName=GNDP Pin=Q1-2
+Removed Pin From Net: NetName=PAD6-VALIM Pin=Q1-3
+Removed Pin From Net: NetName=GNDP Pin=Q2-2
+Removed Pin From Net: NetName=PK2_SOLPRES Pin=R13-1
+Removed Pin From Net: NetName=PK3_SOLDESC Pin=R14-1
+Removed Pin From Net: NetName=NetC23_2 Pin=R14-2
+Removed Pin From Net: NetName=PK0_SOL2020 Pin=R15-1
+Removed Pin From Net: NetName=NetC22_2 Pin=R15-2
+Removed Pin From Net: NetName=PK5_SOLAUX Pin=R16-1
+Removed Pin From Net: NetName=PP1_SOLPAUX1 Pin=R17-1
+Removed Pin From Net: NetName=PP3_SOLPPEEP Pin=R18-1
+Removed Pin From Net: NetName=PP5_SOLPFLU Pin=R19-1
+Removed Pin From Net: NetName=VCC Pin=R38-1
+Removed Pin From Net: NetName=VIN Pin=R40-1
+Removed Pin From Net: NetName=GNDP Pin=R42-2
+Removed Pin From Net: NetName=PAD5-O2CELL Pin=R50-2
+Removed Pin From Net: NetName=GND Pin=U3-9
+Removed Pin From Net: NetName=GND Pin=U3-10
+Removed Pin From Net: NetName=GND Pin=U3-11
+Removed Pin From Net: NetName=GND Pin=U3-12
+Removed Pin From Net: NetName=GND Pin=U3-108
+Removed Pin From Net: NetName=SOLPRES Pin=U5-2
+Removed Pin From Net: NetName=GND Pin=U5-4
+Removed Pin From Net: NetName=GND Pin=U5-6
+Removed Pin From Net: NetName=GND Pin=U5-7
+Removed Pin From Net: NetName=NetC23_2 Pin=U5-8
+Removed Pin From Net: NetName=SOLDESC Pin=U5-9
+Removed Pin From Net: NetName=12V Pin=U5-10
+Removed Pin From Net: NetName=SOL2020 Pin=U5-11
+Removed Pin From Net: NetName=NetC22_2 Pin=U5-13
+Removed Pin From Net: NetName=GND Pin=U5-14
+Removed Pin From Net: NetName=GND Pin=U5-15
+Removed Pin From Net: NetName=GND Pin=U5-16
+Removed Pin From Net: NetName=GND Pin=U5-17
+Removed Pin From Net: NetName=SOLAUX Pin=U5-20
+Removed Pin From Net: NetName=SOLPAUX Pin=U6-2
+Removed Pin From Net: NetName=GND Pin=U6-4
+Removed Pin From Net: NetName=GND Pin=U6-6
+Removed Pin From Net: NetName=GND Pin=U6-7
+Removed Pin From Net: NetName=SOLPPEEP Pin=U6-9
+Removed Pin From Net: NetName=12V Pin=U6-10
+Removed Pin From Net: NetName=SOLPFLU Pin=U6-11
+Removed Pin From Net: NetName=GND Pin=U6-14
+Removed Pin From Net: NetName=GND Pin=U6-15
+Removed Pin From Net: NetName=GND Pin=U6-16
+Removed Pin From Net: NetName=GND Pin=U6-17
+Removed Pin From Net: NetName=PAD5-O2CELL Pin=U13-6
+Change Component DesignItemId : Designator=C21 Old DesignItemId=Cap New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=D1 Old DesignItemId=Diode 1N4148 New DesignItemId=D Zener
+Change Component DesignItemId : Designator=D2 Old DesignItemId=Diode 1N4148 New DesignItemId=D Zener
+Change Component DesignItemId : Designator=P14 Old DesignItemId=Header 2 New DesignItemId=Header 4
+Change Component DesignItemId : Designator=U5 Old DesignItemId=ULN2064LB New DesignItemId=DRV8803PWPR
+Change Component DesignItemId : Designator=U6 Old DesignItemId=ULN2064LB New DesignItemId=DRV8803PWPR
+Change Component Footprint: Designator=P1 Old Footprint=HDR2X3 New Footprint=IDC2X3
+Change Component Footprint: Designator=P9 Old Footprint=HDR2X5 New Footprint=IDC2X5
+Change Component Footprint: Designator=P4 Old Footprint=HDR2X5_CEN New Footprint=IDC2X5_CEN
+Change Component Footprint: Designator=P5 Old Footprint=HDR2X5_CEN New Footprint=IDC2X5_CEN
+Change Component Footprint: Designator=D1 Old Footprint=SOD123 New Footprint=SMB
+Change Component Footprint: Designator=D2 Old Footprint=SOD123 New Footprint=SMB
+Change Component Footprint: Designator=U5 Old Footprint=SOIC127P1030-20AM New Footprint=DRV8803
+Change Component Footprint: Designator=U6 Old Footprint=SOIC127P1030-20AM New Footprint=DRV8803
+Change Component Footprint: Designator=P14 Old Footprint=VAL-U-LOK_2PIN New Footprint=HDR1X4
+Change Component Comment : Designator=R16 Old Comment=1k New Comment=2k
+Change Component Comment : Designator=R17 Old Comment=1k New Comment=2k
+Change Component Comment : Designator=R13 Old Comment=1k New Comment=10k
+Change Component Comment : Designator=R14 Old Comment=1k New Comment=10k
+Change Component Comment : Designator=R15 Old Comment=1k New Comment=10k
+Change Component Comment : Designator=D1 Old Comment=1N4148W New Comment=SMBJ24A-13-F
+Change Component Comment : Designator=D2 Old Comment=1N4148W New Comment=SMBJ24A-13-F
+Change Component Comment : Designator=R35 Old Comment=2.2k New Comment=10k
+Change Component Comment : Designator=U5 Old Comment=ULN2064LB New Comment=DRV8803PWPR
+Change Component Comment : Designator=U6 Old Comment=ULN2064LB New Comment=DRV8803PWPR
+Change Component Comment : Designator=P17 Old Comment=Vbat New Comment=Sal1
+Change Component Description : Designator=C21 Old Description=Capacitor New Description=Capacitor (Semiconductor SIM Model)
+Added Component: Designator=FB15(INDC1608N)
+Added Component: Designator=FB16(INDC1608N)
+Added Component: Designator=FB17(INDC1608N)
+Added Component: Designator=FB18(INDC1608N)
+Added Component: Designator=FB19(INDC1608N)
+Added Component: Designator=FB20(INDC1608N)
+Added Component: Designator=P10(CON1X3)
+Added Component: Designator=P11(CON1X3)
+Added Component: Designator=P12(CON1X3)
+Added Pin To Net: NetName=GNDA Pin=C21-1
+Added Pin To Net: NetName=PAD5-O2CELL Pin=C21-2
+Added Pin To Net: NetName=NetC22_2 Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=NetC23_2 Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Pin To Net: NetName=VMON Pin=D8-1
+Added Pin To Net: NetName=NetD8_1 Pin=D8-2
+Added Pin To Net: NetName=GND Pin=FB17-2
+Added Pin To Net: NetName=GND Pin=FB20-2
+Added Pin To Net: NetName=PAD6-VALIM Pin=P12-1
+Added Pin To Net: NetName=VBAT Pin=P14-1
+Added Pin To Net: NetName=VIN Pin=P14-2
+Added Pin To Net: NetName=GNDP Pin=P14-3
+Added Pin To Net: NetName=GNDP Pin=P14-4
+Added Pin To Net: NetName=12V Pin=P17-1
+Added Pin To Net: NetName=VIN Pin=P21-1
+Added Pin To Net: NetName=VCC Pin=R13-1
+Added Pin To Net: NetName=VCC Pin=R14-1
+Added Pin To Net: NetName=PAD5-O2CELL Pin=R15-1
+Added Pin To Net: NetName=VCC Pin=R16-2
+Added Pin To Net: NetName=VCC Pin=R17-2
+Added Pin To Net: NetName=12V Pin=U5-1
+Added Pin To Net: NetName=NetC22_2 Pin=U5-2
+Added Pin To Net: NetName=SOLPRES Pin=U5-3
+Added Pin To Net: NetName=SOLDESC Pin=U5-4
+Added Pin To Net: NetName=SOL2020 Pin=U5-6
+Added Pin To Net: NetName=SOLAUX Pin=U5-7
+Added Pin To Net: NetName=PK5_SOLAUX Pin=U5-10
+Added Pin To Net: NetName=PK0_SOL2020 Pin=U5-11
+Added Pin To Net: NetName=GND Pin=U5-12
+Added Pin To Net: NetName=PK3_SOLDESC Pin=U5-13
+Added Pin To Net: NetName=PK2_SOLPRES Pin=U5-14
+Added Pin To Net: NetName=GND Pin=U5-TP
+Added Pin To Net: NetName=12V Pin=U6-1
+Added Pin To Net: NetName=NetC23_2 Pin=U6-2
+Added Pin To Net: NetName=SOLPAUX Pin=U6-3
+Added Pin To Net: NetName=SOLPPEEP Pin=U6-4
+Added Pin To Net: NetName=SOLPFLU Pin=U6-6
+Added Pin To Net: NetName=PP5_SOLPFLU Pin=U6-11
+Added Pin To Net: NetName=GND Pin=U6-12
+Added Pin To Net: NetName=PP3_SOLPPEEP Pin=U6-13
+Added Pin To Net: NetName=PP1_SOLPAUX1 Pin=U6-14
+Added Pin To Net: NetName=GND Pin=U6-TP
+Change Net Name : Old Net Name=NetD8_1 New Net Name=NetD8_2
+Change Net Name : Old Net Name=PP7_SOLPAUX2 New Net Name=PP7_SPK
+Added Pin To Net: NetName=EPIA_COM1_RX Pin=FB15-2
+Added Pin To Net: NetName=EPIA_COM1_RX Pin=U3-92
+Added Net: Name=EPIA_COM1_RX
+Added Pin To Net: NetName=EPIA_COM1_TX Pin=FB16-2
+Added Pin To Net: NetName=EPIA_COM1_TX Pin=U3-91
+Added Net: Name=EPIA_COM1_TX
+Added Pin To Net: NetName=EPIA_COM2_RX Pin=FB18-2
+Added Pin To Net: NetName=EPIA_COM2_RX Pin=U4-9
+Added Net: Name=EPIA_COM2_RX
+Added Pin To Net: NetName=EPIA_COM2_TX Pin=FB19-2
+Added Pin To Net: NetName=EPIA_COM2_TX Pin=U4-10
+Added Net: Name=EPIA_COM2_TX
+Added Pin To Net: NetName=NetFB15_1 Pin=FB15-1
+Added Pin To Net: NetName=NetFB15_1 Pin=P10-1
+Added Net: Name=NetFB15_1
+Added Pin To Net: NetName=NetFB16_1 Pin=FB16-1
+Added Pin To Net: NetName=NetFB16_1 Pin=P10-2
+Added Net: Name=NetFB16_1
+Added Pin To Net: NetName=NetFB17_1 Pin=FB17-1
+Added Pin To Net: NetName=NetFB17_1 Pin=P10-3
+Added Net: Name=NetFB17_1
+Added Pin To Net: NetName=NetFB18_1 Pin=FB18-1
+Added Pin To Net: NetName=NetFB18_1 Pin=P11-1
+Added Net: Name=NetFB18_1
+Added Pin To Net: NetName=NetFB19_1 Pin=FB19-1
+Added Pin To Net: NetName=NetFB19_1 Pin=P11-2
+Added Net: Name=NetFB19_1
+Added Pin To Net: NetName=NetFB20_1 Pin=FB20-1
+Added Pin To Net: NetName=NetFB20_1 Pin=P11-3
+Added Net: Name=NetFB20_1
+Added Pin To Net: NetName=NetR15_2 Pin=R15-2
+Added Pin To Net: NetName=NetR15_2 Pin=R50-2
+Added Pin To Net: NetName=NetR15_2 Pin=U13-6
+Added Net: Name=NetR15_2
+Added Pin To Net: NetName=PK7_SAL1 Pin=U3-108
+Added Pin To Net: NetName=PK7_SAL1 Pin=U6-10
+Added Net: Name=PK7_SAL1
+Added Pin To Net: NetName=PT0_STAT1 Pin=P12-2
+Added Pin To Net: NetName=PT0_STAT1 Pin=R13-2
+Added Pin To Net: NetName=PT0_STAT1 Pin=U3-9
+Added Net: Name=PT0_STAT1
+Added Pin To Net: NetName=PT1_STAT2 Pin=P12-3
+Added Pin To Net: NetName=PT1_STAT2 Pin=R14-2
+Added Pin To Net: NetName=PT1_STAT2 Pin=U3-10
+Added Net: Name=PT1_STAT2
+Added Pin To Net: NetName=PT2_FAULT1 Pin=R16-1
+Added Pin To Net: NetName=PT2_FAULT1 Pin=U3-11
+Added Pin To Net: NetName=PT2_FAULT1 Pin=U5-16
+Added Net: Name=PT2_FAULT1
+Added Pin To Net: NetName=PT3_FAULT2 Pin=R17-1
+Added Pin To Net: NetName=PT3_FAULT2 Pin=U3-12
+Added Pin To Net: NetName=PT3_FAULT2 Pin=U6-16
+Added Net: Name=PT3_FAULT2
+Added Pin To Net: NetName=SAL1 Pin=P17-2
+Added Pin To Net: NetName=SAL1 Pin=U6-7
+Added Net: Name=SAL1
+Added Rule: Name=Schematic Width Constraint_7
+Change Rule Scope 1 : Old Scope=InNet('SOL2020') New Scope=InNet('SOLAUX')
+Change Rule Scope 1 : Old Scope=InNet('SOLAUX') New Scope=InNet('SOLPPEEP')
+Change Rule Scope 1 : Old Scope=InNet('SOLPAUX') New Scope=InNet('SOL2020')
+Change Rule Scope 1 : Old Scope=InNet('SOLPFLU') New Scope=InNet('SOLPAUX')
+Change Rule Scope 1 : Old Scope=InNet('SOLPPEEP') New Scope=InNet('SOLPFLU')

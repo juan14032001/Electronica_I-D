@@ -1,0 +1,35 @@
+Added Component: Designator=D9(CD1608-0603)
+Added Component: Designator=D13(CD1608-0603)
+Added Component: Designator=D14(CD1608-0603)
+Added Component: Designator=D15(CD1608-0603)
+Added Component: Designator=D16(CD1608-0603)
+Added Component: Designator=R26(RESC1608N)
+Added Component: Designator=R53(RESC1608N)
+Added Component: Designator=R54(RESC1608N)
+Added Component: Designator=R55(RESC1608N)
+Added Component: Designator=R56(RESC1608N)
+Added Pin To Net: NetName=GNDP Pin=D9-2
+Added Pin To Net: NetName=GNDP Pin=D13-2
+Added Pin To Net: NetName=GNDP Pin=D14-2
+Added Pin To Net: NetName=GNDA Pin=D15-2
+Added Pin To Net: NetName=GNDP Pin=D16-2
+Added Pin To Net: NetName=VMON Pin=R26-1
+Added Pin To Net: NetName=12V Pin=R53-1
+Added Pin To Net: NetName=VCC Pin=R54-1
+Added Pin To Net: NetName=VFLUJO Pin=R55-1
+Added Pin To Net: NetName=VON Pin=R56-1
+Added Pin To Net: NetName=NetD9_1 Pin=D9-1
+Added Pin To Net: NetName=NetD9_1 Pin=R26-2
+Added Net: Name=NetD9_1
+Added Pin To Net: NetName=NetD13_1 Pin=D13-1
+Added Pin To Net: NetName=NetD13_1 Pin=R53-2
+Added Net: Name=NetD13_1
+Added Pin To Net: NetName=NetD14_1 Pin=D14-1
+Added Pin To Net: NetName=NetD14_1 Pin=R54-2
+Added Net: Name=NetD14_1
+Added Pin To Net: NetName=NetD15_1 Pin=D15-1
+Added Pin To Net: NetName=NetD15_1 Pin=R55-2
+Added Net: Name=NetD15_1
+Added Pin To Net: NetName=NetD16_1 Pin=D16-1
+Added Pin To Net: NetName=NetD16_1 Pin=R56-2
+Added Net: Name=NetD16_1
